@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Paste Image",
+  "description": "Paste image from clipboard to LinkedIn posts and comments. No need to first save a file on disk.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "PasteImage16.png",
+    "32": "PasteImage32.png",
+    "48": "PasteImage48.png",
+    "128": "PasteImage128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
